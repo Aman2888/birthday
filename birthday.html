@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Birthday Nimra 🎂</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Caveat:wght@600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --pd: #ef7fa8;
+            --gold: #f2b134;
+            --cream: #fdf0ec;
+            --card: #fff;
+            --ink: #5b4038;
+            --soft: #fbdfe6;
+            --line: #f6cdd7
+        }
+
+        @media(prefers-color-scheme:dark) {
+            :root {
+                --cream: #241a1d;
+                --card: #2f2225;
+                --ink: #f6d9dd;
+                --soft: #3a2a2e;
+                --line: #4a3438
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background: linear-gradient(160deg, var(--cream), var(--soft));
+            color: var(--ink);
+            min-height: 100vh;
+            overflow-x: hidden
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 16px 6px
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 9vw, 3.4rem);
+            background: linear-gradient(90deg, var(--pd), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent
+        }
+
+        .script,
+        .to {
+            font-family: 'Caveat', cursive;
+            font-weight: 700
+        }
+
+        .script {
+            font-size: 2.6rem;
+            margin-top: -6px
+        }
+
+        .to {
+            font-size: 1.9rem;
+            color: var(--pd)
+        }
+
+        #music {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 9;
+            border: 2px solid var(--line);
+            background: var(--card);
+            border-radius: 999px;
+            padding: 8px 12px;
+            font: 600 .8rem 'Fredoka';
+            color: var(--ink);
+            cursor: pointer
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            padding: 12px 8px;
+            backdrop-filter: blur(6px)
+        }
+
+        .tabbar {
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            width: max-content;
+            max-width: 100%;
+        }
+
+        .tabbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tabbar button {
+            padding: 9px 12px;
+        }
+
+        .tabbar button {
+            border: 0;
+            background: none;
+            font: 600 .82rem 'Fredoka';
+            padding: 9px 14px;
+            border-radius: 999px;
+            color: var(--ink);
+            white-space: nowrap;
+            position: relative;
+            z-index: 1;
+            cursor: pointer
+        }
+
+        .tabbar button.on {
+            color: #fff
+        }
+
+        .ind {
+            position: absolute;
+            top: 5px;
+            bottom: 5px;
+            left: 5px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--pd), var(--gold));
+            transition: .35s
+        }
+
+        main {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 10px 18px 50px
+        }
+
+        .panel {
+            display: none;
+            animation: in .4s
+        }
+
+        .panel.on {
+            display: block
+        }
+
+        @keyframes in {
+            from {
+                opacity: 0;
+                transform: translateY(12px)
+            }
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 26px;
+            padding: 24px 20px;
+            border: 2px dashed var(--line);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(220, 120, 150, .18)
+        }
+
+        .card h2,
+        .st {
+            font-family: 'Caveat', cursive;
+            color: var(--pd);
+            font-size: 2rem
+        }
+
+        .card p {
+            line-height: 1.8;
+            margin: 10px 0
+        }
+
+        .st {
+            text-align: center;
+            margin: 6px 0 14px
+        }
+
+        .big {
+            font-size: 56px;
+            display: inline-block;
+            animation: sw 2.6s ease-in-out infinite
+        }
+
+        @keyframes sw {
+            50% {
+                transform: rotate(4deg)
+            }
+        }
+
+        .stage {
+            text-align: center;
+            padding-bottom: 14px
+        }
+
+        .bear {
+            width: 210px;
+            max-width: 70%;
+            cursor: pointer;
+            animation: bb 2s ease-in-out infinite
+        }
+
+        .bear.j {
+            animation: bj .7s
+        }
+
+        @keyframes bb {
+            50% {
+                transform: translateY(-8px)
+            }
+        }
+
+        @keyframes bj {
+            30% {
+                transform: translateY(-40px)
+            }
+        }
+
+        .wave {
+            transform-origin: 148px 145px;
+            animation: wv 1.2s ease-in-out infinite
+        }
+
+        @keyframes wv {
+            50% {
+                transform: rotate(-22deg)
+            }
+        }
+
+        .eye {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: bl 4s infinite
+        }
+
+        @keyframes bl {
+
+            94%,
+            100% {
+                transform: scaleY(1)
+            }
+
+            96% {
+                transform: scaleY(.1)
+            }
+        }
+
+        .bub {
+            display: inline-block;
+            background: var(--card);
+            border: 2px solid var(--pd);
+            font: 1.5rem 'Caveat';
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 8px
+        }
+
+        .hint {
+            color: var(--pd);
+            font-weight: 600;
+            font-size: .9rem
+        }
+
+        .env {
+            font-size: 80px;
+            cursor: pointer;
+            text-align: center
+        }
+
+        .paper {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 1s, opacity .6s;
+            background: var(--card);
+            border-radius: 18px;
+            border: 2px solid var(--line);
+            padding: 0 18px
+        }
+
+        .paper.open {
+            max-height: 1800px;
+            opacity: 1;
+            padding: 20px 18px;
+            margin-top: 10px
+        }
+
+        .paper .dear {
+            font: 1.7rem 'Caveat';
+            color: var(--pd);
+            margin-bottom: 10px
+        }
+
+        .quote {
+            background: linear-gradient(135deg, var(--soft), var(--card));
+            border-radius: 16px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            border-left: 5px solid var(--pd);
+            line-height: 1.7
+        }
+
+        .sig {
+            font: 1.6rem 'Caveat';
+            color: var(--pd);
+            text-align: right
+        }
+
+        .btn {
+            margin-top: 14px;
+            border: 0;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font: 700 1rem 'Fredoka';
+            color: #fff;
+            background: linear-gradient(90deg, var(--pd), var(--gold));
+            cursor: pointer
+        }
+
+        .wm {
+            margin-top: 12px;
+            font: 1.5rem 'Caveat';
+            color: var(--pd);
+            min-height: 30px
+        }
+
+        footer {
+            text-align: center;
+            padding: 16px;
+            font-size: .85rem;
+            color: var(--pd)
+        }
+
+        .cf {
+            position: fixed;
+            top: -20px;
+            z-index: 20;
+            animation: fall linear forwards
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(105vh) rotate(360deg);
+                opacity: .2
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="music">🎵 Play Music</button>
+    <header>
+        <div style="font-size:26px">🎈</div>
+        <h1>HAPPY</h1>
+        <div class="script">Birthday</div>
+        <div class="to">to you, Nimra ♥</div>
+    </header>
+    <nav>
+        <div class="tabbar">
+            <button class="on">💌 Card</button><button>🧸 Bear</button><button>✉️ Letter</button><button>✨ Wish</button>
+            <div class="ind" id="ind"></div>
+        </div>
+    </nav>
+    <main>
+
+        <section class="panel on">
+            <div class="card"><span class="big">🎂</span>
+                <h2>Happy Birthday Nimra!</h2>
+                <p>My lovely friend, we're both September Libras, so maybe that's why we understand each other so well.
+                    You're not just my friend, you're my sister bestie, the one I share every little thing with. Your
+                    smile and your sweet nature are so special, and I hope the world gives you all the happiness you
+                    deserve.</p>
+                <p>Today is your day, so enjoy every moment! 🎉</p>
+                <p style="font:1.4rem 'Caveat';color:var(--pd)">Amna ♥</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="st">Someone wants to say hi 🧸</div>
+            <div class="stage">
+                <div class="bub" id="bub">Tap me, Nimra! 🎉</div><br>
+                <svg id="bear" class="bear" viewBox="0 0 200 230">
+                    <ellipse cx="72" cy="216" rx="20" ry="11" fill="#b9835a" />
+                    <ellipse cx="128" cy="216" rx="20" ry="11" fill="#b9835a" />
+                    <ellipse cx="100" cy="175" rx="48" ry="42" fill="#b9835a" />
+                    <ellipse cx="100" cy="182" rx="30" ry="28" fill="#f3d9b8" />
+                    <ellipse cx="55" cy="170" rx="13" ry="26" fill="#b9835a" transform="rotate(15 55 170)" />
+                    <g class="wave">
+                        <ellipse cx="148" cy="165" rx="13" ry="26" fill="#b9835a" transform="rotate(-25 148 165)" />
+                    </g>
+                    <circle cx="55" cy="68" r="20" fill="#b9835a" />
+                    <circle cx="145" cy="68" r="20" fill="#b9835a" />
+                    <circle cx="55" cy="68" r="10" fill="#f7a8c4" />
+                    <circle cx="145" cy="68" r="10" fill="#f7a8c4" />
+                    <circle cx="100" cy="105" r="55" fill="#c89466" />
+                    <ellipse cx="100" cy="122" rx="24" ry="18" fill="#f3d9b8" />
+                    <ellipse class="eye" cx="80" cy="98" rx="5" ry="7" fill="#3b2a25" />
+                    <ellipse class="eye" cx="120" cy="98" rx="5" ry="7" fill="#3b2a25" />
+                    <ellipse cx="100" cy="114" rx="7" ry="5" fill="#3b2a25" />
+                    <path d="M91 124Q100 133 109 124" stroke="#3b2a25" stroke-width="3" fill="none"
+                        stroke-linecap="round" />
+                    <circle cx="64" cy="116" r="8" fill="#f7a8c4" opacity=".6" />
+                    <circle cx="136" cy="116" r="8" fill="#f7a8c4" opacity=".6" />
+                    <polygon points="100,8 74,58 126,58" fill="#ef7fa8" />
+                    <ellipse cx="100" cy="58" rx="26" ry="5" fill="#f2b134" />
+                    <circle cx="100" cy="8" r="7" fill="#f2b134" />
+                </svg>
+                <div class="hint">👆 Tap the bear</div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="st">A letter for you ✉️</div>
+            <div class="env" id="env">💌</div>
+            <p style="text-align:center;font-size:.9rem;color:var(--pd)">Tap the envelope to open</p>
+            <div class="paper" id="paper">
+                <div class="dear">Dear Nimra,</div>
+                <div class="quote">You're the friend I share every happiness and every worry with, without any fear.
+                </div>
+                <div class="quote">Even the hardest moments feel lighter with you around. Thank you for being you.</div>
+                <div class="quote">Friendships like ours are rare: real, honest, and forever.</div>
+                <div class="quote">May Allah Pak fill your life with khair, afiya, peace, and barakah.</div>
+                <div class="quote">May this new year bring you everything you wish for: happiness, love, and endless
+                    smiles 🌸</div>
+                <div class="sig">Always yours, Amna ♥</div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="card">
+                <div style="font-size:44px">🕯️🎂🕯️</div>
+                <div class="st">Make a wish, Nimra!</div>
+                <p>Tap the button and blow out the candle ✨</p>
+                <button class="btn" id="wb">🎈 Blow the Candle</button>
+                <div class="wm" id="wm"></div>
+            </div>
+        </section>
+
+    </main>
+    <footer>Made with 💗 by Amna, for the best friend Nimra</footer>
+
+    <script>
+        const $ = id => document.getElementById(id), tabs = [...document.querySelectorAll('.tabbar button')], panels = [...document.querySelectorAll('.panel')];
+        // function mv(b) { $('ind').style.width = b.offsetWidth + 'px'; $('ind').style.transform = 'translateX(' + b.offsetLeft + 'px)' }
+        function mv(b){$('ind').style.width=b.offsetWidth+'px';$('ind').style.transform='translateX('+b.offsetLeft+'px)';b.scrollIntoView({inline:'center',block:'nearest'})}
+        tabs.forEach((b, i) => b.onclick = () => { tabs.forEach((t, j) => t.classList.toggle('on', i === j)); panels.forEach((p, j) => p.classList.toggle('on', i === j)); mv(b) });
+        addEventListener('load', () => mv(tabs[0]));
+        function confetti(n, set) { for (let i = 0; i < n; i++) { const c = document.createElement('span'); c.className = 'cf'; c.textContent = set[Math.floor(Math.random() * set.length)]; c.style.left = Math.random() * 100 + 'vw'; c.style.animationDuration = 2 + Math.random() * 1.5 + 's'; c.style.fontSize = 14 + Math.random() * 14 + 'px'; document.body.appendChild(c); setTimeout(() => c.remove(), 3600) } }
+        const E = ['🎉', '✨', '🩷', '⭐', '💛'];
+        const bm = ["Happy Birthday, Nimra! 🎉", "Amna says: you're the best! 💖", "Make a big wish! ✨", "Cake time! 🎂", "Sending you a big hug 🤗"]; let bi = 0;
+        $('bear').onclick = () => { $('bub').textContent = bm[bi++ % bm.length]; const b = $('bear'); b.classList.remove('j'); void b.getBoundingClientRect(); b.classList.add('j'); confetti(12, E); setTimeout(() => b.classList.remove('j'), 700) };
+        $('env').onclick = () => { $('paper').classList.toggle('open'); $('env').textContent = $('paper').classList.contains('open') ? '📖' : '💌' };
+        const wm = ["Wish granted, Nimra! This year is all yours 🌟", "Candle blown out, now it's happiness all the way! 🎉", "From Amna: may every single wish of yours come true ♥"];
+        $('wb').onclick = () => { $('wm').textContent = wm[Math.floor(Math.random() * 3)]; confetti(26, E) };
+        let ctx = null, tm = null;
+        const N = [[392, .75], [392, .25], [440, 1], [392, 1], [523, 1], [494, 2], [392, .75], [392, .25], [440, 1], [392, 1], [587, 1], [523, 2], [392, .75], [392, .25], [784, 1], [659, 1], [523, 1], [494, 1], [440, 1], [698, .75], [698, .25], [659, 1], [523, 1], [587, 1], [523, 2]];
+        function stop() { if (ctx) { ctx.close(); ctx = null } clearTimeout(tm); $('music').textContent = '🎵 Play Music' }
+        $('music').onclick = () => {
+            if (ctx) return stop(); ctx = new (window.AudioContext || window.webkitAudioContext)(); let t = ctx.currentTime + .1; const beat = .42;
+            N.forEach(([f, d]) => { const o = ctx.createOscillator(), g = ctx.createGain(); o.type = 'triangle'; o.frequency.value = f; g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.25, t + .03); g.gain.exponentialRampToValueAtTime(.001, t + d * beat); o.connect(g); g.connect(ctx.destination); o.start(t); o.stop(t + d * beat); t += d * beat });
+            $('music').textContent = '⏹ Stop Music'; tm = setTimeout(stop, (t - ctx.currentTime) * 1000 + 300)
+        };
+    </script>
+</body>
+
+</html>
